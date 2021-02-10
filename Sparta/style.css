@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Mega&family=Spartan:wght@300;400;600&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+html,body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+body {
+    font-size: 16px;
+    font-family:'Spartan', sans-serif;
+    background: #3d3a3a;
+}
+
+
+h1,h2,h3,h4 {color: #ffffff;}
+
+h1 {font-size: 3rem;}
+h2 {font-size: 2.2rem;}
+h3{font-size: 1.5rem;}
+
+a {
+    color: rgb(204,201,168); 
+    font-size: 1.1rem; 
+    text-decoration: none;
+}
+
+p {color: #ddd8d8; margin: 20px 0px 10px 0px; font-size: 1.2rem;}
+
+
+/*Header*/
+nav {
+    background-color: rgb(65, 58, 58);
+}
+.nav-list {
+    display: flex;
+    max-width: 800px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 10px 0px;
+    position: relative;
+}
+
+.nav-list li {
+    flex: 1;
+    text-align: center;
+}
+.nav-list a {
+    position: relative;
+}
+.nav-list a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #fffbe0;
+    transition: width 0.3s ease;
+}
+.nav-list a:hover::after {
+    width: 100%;
+}
+
+
+/*Motivation*/
+.home {
+    background: url('images/backgodun.jpg') no-repeat top;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: inset 0px 0px 80px 50px #181717;
+}
+
+.home .text {
+    text-align: center;
+    position: relative;
+    top: 180px;
+    text-shadow: 4px -2px 14px black;
+    transform: translateY(-150px);
+    opacity: 0;
+    animation: Dole 1s ease 0.3s forwards;
+}
+
+@keyframes Dole {
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/*Motivation*/
+.motivation .container {
+    background: rgb(204,201,168);
+    background: linear-gradient(145deg, rgba(204,201,168,0.9500175070028011) 0%, rgba(0,0,0,1) 78%);
+    min-height: 65vh;
+}
+
+.motivation .text  {
+    padding: 80px 30px ;
+    text-align: left;
+    color: black;
+}
+.text p {
+    min-width: 340px;
+}
+.motep {color: rgb(255, 255, 255);}
+.moteh {color: black;}
+
+/*Battle*/
+.battle .container {
+    position: relative;
+    background-color: rgb(13 9 5);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+
+}
+.bg-image {
+    background: url('images/head2.jpg') no-repeat center;
+    opacity: 60%;
+}
+.battle .text {
+    text-align: center;
+    align-self: center;
+}
+.battle button {
+    cursor: pointer;
+    border: 1px solid rgb(204,201,168);
+    color: rgb(204,201,168);
+    background-color: transparent;
+    min-width: 200px;
+    max-width: 800px;
+    font-size: 1.4rem;
+    padding: 10px;
+    margin-top: 10px;
+    transition: color 0.5s ease,
+    border-color 0.5s ease;
+}
+.battle button:hover {
+    color: #e71b1b;
+    border-color: #e71b1b;
+}
+.battle span {
+    display: block;
+    color: green;
+    font-size: 1.1rem;
+    margin-top: 15px;
+}
+
+/*HELPER CLASS*/
+.container {
+    max-width: 1700px;
+    margin: 0 auto;
+    min-height: 80vh;
+
+}
+
+@media screen and (max-width: 1400px) {
+    .bg-image {display: none;}
+    .battle .text {grid-column: 1 / span 2;}
+
+    h1 {font-size: 2.6rem;}
+    h2 {font-size: 1.9rem;}
+    h3{font-size: 1.3rem;}
+
+    a {font-size: 1.1rem;}
+    p {font-size: 1.1rem;}
+}
+
+
+@media screen and (max-width: 350px) {
+    h1 {font-size: 2.3rem;}
+    h2 {font-size: 1.6rem;}
+    h3{font-size: 1rem;}
+
+    a {font-size: 1rem;}
+    .text p {font-size: 1rem; min-width: 0;}
+
+    .motivation .text  {
+        padding: 0px ;
+
+    }
+   
+    .nav-list {
+        flex-direction: column;
+        
+    }
+    .nav-list li {padding: 5px 0px;}
+}

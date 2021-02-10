@@ -1,0 +1,2 @@
+font-family: 'Lexend Mega', sans-serif;
+font-family: 'Spartan', sans-serif;
